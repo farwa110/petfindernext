@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/utils/*": ["./utils/*"] // Add this line to explicitly point to the utils folder
     }
   }
 }
