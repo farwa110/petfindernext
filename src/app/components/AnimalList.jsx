@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 import { useEffect, useState } from "react";
 import AnimalCard from "./AnimalCard";
@@ -8,11 +9,12 @@ const AnimalsList = ({ data }) => {
   const [filteredAnimals, setFilteredAnimals] = useState(data);
 
   useEffect(() => {
+    const saved = JSON.parse(localStorage.getItem("favorites")) || [];
+    const favAnimals = data.filter((animal) => saved.includes(animal.id));
     if (favoritesOnly) {
-      const saved = JSON.parse(localStorage.getItem("favorites")) || [];
-      const favAnimals = data.filter((animal) => saved.includes(animal.id));
       setFilteredAnimals(favAnimals);
     } else {
+      console.log(favAnimals, "id");
       setFilteredAnimals(data);
     }
   }, [favoritesOnly, data]);
@@ -44,8 +46,10 @@ const AnimalsList = ({ data }) => {
             </p>
           </div>
         ) : (
-          filteredAnimals.map((animal, id) => (
-            <AnimalCard key={id} data={animal} />
+          filteredAnimals.map((animal, i) => (
+            <Link key={animal.id} href={`/singleview/${animal.id}`}>
+              <AnimalCard data={animal} />
+            </Link>
           ))
         )}
       </div>

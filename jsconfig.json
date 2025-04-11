@@ -1,8 +1,28 @@
+// {
+//   "compilerOptions": {
+//     "paths": {
+//       "@/*": ["./src/*"],
+//       "@/utils/*": ["./utils/*"] // Add this line to explicitly point to the utils folder
+//     }
+//   }
+// }
+// {
+//   "compilerOptions": {
+//     "baseUrl": "./src",
+//     "paths": {
+//       "@/*": ["./*"],
+//       "@/utils/*": ["src/app/utils/*"],
+//       "@/lib/*": ["src/app/lib/*"]
+//     }
+//   }
+// }
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./src/*"],
-      "@/utils/*": ["./utils/*"] // Add this line to explicitly point to the utils folder
+      "@utils/*": ["app/utils/*"],
+      "@lib/*": ["app/lib/*"],
+      "@/*": ["*"]
     }
   }
 }

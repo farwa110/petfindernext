@@ -1,4 +1,4 @@
-import { getAnimals, getAnimalTypes } from "../../../lib/api";
+import { getAnimals, getAnimalTypes } from "../lib/api";
 
 import AnimalListWrapper from "@/app/components/AnimalListWrapper";
 import AnimalFilter from "../components/AnimalFilter";
