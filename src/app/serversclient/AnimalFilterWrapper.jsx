@@ -1,7 +1,7 @@
 // app/serverclient/AnimalFilterWrapper.jsx
 
 // Update the import to a relative path from the current file
-import { getAnimalTypes } from "../../../lib/api"; // Adjust the path to point to the correct location
+import { getAnimalTypes } from "../lib/api"; // Adjust the path to point to the correct location
 // Import the API function
 import AnimalFilter from "../components/AnimalFilter"; // Going up one level to the app/ folder, then into components/
 

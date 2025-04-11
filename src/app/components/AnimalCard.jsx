@@ -24,8 +24,6 @@ const AnimalCard = ({ data }) => {
     setIsFavorite(!isFavorite);
   };
 
-  console.log("DATA: ", data.photos);
-
   return (
     <div className="relative overflow-hidden rounded-lg shadow-md">
       <div className="relative h-64 w-full">
